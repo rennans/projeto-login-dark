@@ -9,6 +9,10 @@ body{
     margin: 0;
 }
 
+body *{
+    box-sizing: border-box;
+}
+
 .main-login{
     width: 100vw;
     height: 100vh;
@@ -28,7 +32,12 @@ body{
 }
 
 .login-left > h1{
+    font-size: 3vw;
     color: #77ffc0;
+}
+
+.astronauta{
+    width: 35vw;
 }
 
 .login-right{
@@ -103,4 +112,41 @@ button{
     background-color: #00ff88;
     cursor: pointer;
     box-shadow: 0px 10px 40px -12px #00ff8052;
+}
+
+
+@media only screen and (max-width: 950px){
+    .campo-login{
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .main-login{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .login-left > h1{
+        display: none;
+    }
+
+    .login-left{
+        width: 100%;
+        height: auto;
+    }
+    
+    .login-right    {
+        width: 100%;
+        height: auto;
+    }
+
+    .astronauta{
+        width: 50vw;
+    }
+    
+    .campo-login{
+        width: 90%;
+    }
+    
 }
